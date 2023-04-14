@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script defer src="app2.js" type="module"></script>
+    <title>Predict if your game was won by blue or not!</title>
+</head>
+
+<body>
+    <div>
+        <h2>Predict your own league game outcome!</h2>
+        <h4>Put in 0 for untrue and 1 for true</h4>
+        <form>
+            <label for="gameDuraton">Game Duration (seconds):</label><br>
+            <input type="text" id="gameDuraton" name="gameDuraton"><br>
+            <label for="blueFirstTower">Blue First Tower:</label><br>
+            <input type="text" id="blueFirstTower" name="blueFirstTower"><br>
+            <label for="blueFirstBaron">Blue First Baron:</label><br>
+            <input type="text" id="blueFirstBaron" name="blueFirstBaron"><br>
+            <label for="blueFirstInhibitor">Blue First Inhibitor:</label><br>
+            <input type="text" id="blueFirstInhibitor" name="blueFirstInhibitor"><br>
+            <label for="blueDragonKills">Blue Dragon Kills:</label><br>
+            <input type="text" id="blueDragonKills" name="blueDragonKills"><br>
+            <label for="blueBaronKills">Blue Baron Kills:</label><br>
+            <input type="text" id="blueBaronKills" name="blueBaronKills"><br>
+            <label for="blueTowerKills">Blue Tower Kills:</label><br>
+            <input type="text" id="blueTowerKills" name="blueTowerKills"><br>
+            <label for="Cap-shape">Blue Inhibitor Kills:</label><br>
+            <input type="text" id="blueInhibitorKills" name="blueInhibitorKills"><br>
+            <input type="submit" value="Submit" onClick="modelLoaded()"><br>
+        </form>
+    </div>
+    <div>
+        <h3>Prediction (ignore the text until after submitting):</h3>
+        <h4 id="prediction"></h4>
+    </div>
+    <div><button onclick="location.href='index.html'">Go to the decision tree</button></div>
+</body>
+</html>
+
+
+
+
+
+
+
